@@ -20,6 +20,7 @@ body {
 .firstbox {
   color: rgb(126, 80, 80);
   background-color: rgb(250, 211, 163);
+  position:relative;
 
   
 }
@@ -27,12 +28,14 @@ body {
 .wrapper {
   max-width: 90ch;
   margin-inline: auto;
+  position:relative;
 }
 
 .firstbox-wrapper {
   padding: 2rem;
   size: 5rem;
   overflow: hidden;
+  position:relative;
 }
 
 .options {
@@ -215,7 +218,8 @@ header {
 .rlct {
   mix-blend-mode: multiply;
   pointer-events: none;
-  overflow: hidden;
+  overflow-x: hidden;
+  position: absolute;
 }
 
 #rlct-1 {
@@ -224,14 +228,12 @@ header {
   transform: translate(-9em, -5em);
 
   background-color: rgb(164, 255, 255);
-  position: absolute;
 }
 
 #rlct-2 {
   transform: translate(30em, -10em);
 
   background-color: rgb(255, 248, 183);
-  position: absolute;
   width: 200px;
   height: 400px;
 }
@@ -240,7 +242,6 @@ header {
   transform: translate(5em, -14em);
 
   background-color: rgb(255, 222, 236);
-  position: absolute;
 
   width: 700px;
   height: 100px;
