@@ -1,0 +1,247 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  
+}
+
+h1 {
+  color: rgb(61, 80, 82);
+  text-align: center;
+  font-size: 5em;
+}
+
+body {
+  background-image: url(BG.png);
+  background-attachment: fixed;
+  margin: 0;
+  margin-block-end: 2em;
+  align-self: center;
+}
+
+.firstbox {
+  color: rgb(126, 80, 80);
+  background-color: rgb(250, 211, 163);
+
+  
+}
+
+.wrapper {
+  max-width: 90ch;
+  margin-inline: auto;
+}
+
+.firstbox-wrapper {
+  padding: 2rem;
+  size: 5rem;
+  overflow: hidden;
+}
+
+.options {
+  display: flex;
+  padding: 3em 4em;
+  color: rgb(0, 0, 0);
+  gap: 1rem 3rem;
+  flex-wrap: wrap;
+  background-color: rgb(243, 189, 189);
+  box-shadow: 5em;
+  
+}
+
+#aboutwrap {
+  background-color: white;
+  display: flex;
+  padding: 2em;
+  gap: 2em;
+  flex-wrap: wrap-reverse;
+  box-sizing: border-box;
+}
+
+#aboutwrapGrid {
+  background-color: white;
+  display: grid;
+  padding: 2em;
+  gap: 2em;
+  box-sizing: border-box;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+
+}
+
+#me-photoGrid {
+  
+  img {
+    width: 100%;
+  }
+}
+
+#me-photo {
+  flex: 1 1 300px;
+  img {
+    width: 100%;
+  }
+}
+
+
+#about-text {
+  flex: 1 0 50%;
+}
+
+header {
+  padding: 3em;
+  color: rgb(115, 41, 41);
+  & h2 {
+    border: 1rem;
+    border-color: rgba(172, 53, 9, 0.5);
+    padding: 1rem 2rem;
+    border-style: double;
+
+    
+    font-size: 3em;
+    border-radius: 1em;
+
+  }
+
+  > * {
+    margin-inline: auto;
+    
+    width: fit-content;
+    margin-block:0.5em;
+
+    
+   
+  }
+
+}
+
+.piece:not(:first-child) {
+    margin-top: 1rem;
+  }
+
+#portHead {
+  background: linear-gradient(90deg, rgba(121,9,77,1) 0%, rgba(255,163,0,1) 100%);
+  color: rgb(255, 255, 255); 
+
+}
+
+#aboutHead {
+  background-color: rgb(141, 255, 206);
+}
+
+
+
+#portwrap {
+  background-color: rgb(255, 255, 255);
+  padding: 3rem;
+  display: flex;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  gap: 1rem;
+  flex-wrap: wrap;
+  box-sizing: border-box;
+
+  .column {
+    flex: 1 1 300px;
+  }
+  & img {
+    width: 100%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    user-select: none;
+    cursor: grab;
+    object-fit: contain;
+    
+  }
+
+  & p {
+    display: none;
+    background-color: white;
+    padding: 1em;
+    box-shadow: 0px 0px 10px;
+    
+  }
+
+
+  
+  /* this is what happens when you click the image */
+  /* Code based on: https://stackoverflow.com/questions/69598371/css-photo-gallery-with-zoom-on-click-simple */
+  input:checked+.piece{
+
+    background-color: rgba(64, 24, 46, 0.8);
+    position: fixed;
+    inset: 0;
+    box-shadow: none;
+    margin: auto;
+    padding-top: 1em;
+    padding-bottom: 5em;
+
+    
+
+    z-index: 99999;
+    width: 100vw;
+    height: 100vh;
+
+    & p {
+      display:block;
+      position:fixed;
+      bottom: 0;
+      
+    }
+
+    & img {
+      position: fixed;
+      width: 90%;
+      height: 90%;
+      
+      left: 0;
+      right: 0;
+      top:0;
+      bottom:0;
+      margin: auto;
+      box-shadow: none;
+    }
+
+    
+    
+  }
+
+  /* makes checkbox invisible */
+
+  input {
+    display: none;
+  
+  }
+
+ 
+}
+
+/* these are for the color boxes */
+
+.rlct {
+  mix-blend-mode: multiply;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+#rlct-1 {
+  width: 400px;
+  height: 200px;
+  transform: translate(-9em, -5em);
+
+  background-color: rgb(164, 255, 255);
+  position: absolute;
+}
+
+#rlct-2 {
+  transform: translate(30em, -10em);
+
+  background-color: rgb(255, 248, 183);
+  position: absolute;
+  width: 200px;
+  height: 400px;
+}
+
+#rlct-3 {
+  transform: translate(5em, -14em);
+
+  background-color: rgb(255, 222, 236);
+  position: absolute;
+
+  width: 700px;
+  height: 100px;
+}
